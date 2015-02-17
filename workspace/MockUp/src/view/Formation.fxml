@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="709.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.FormationController">
+   <children>
+      <Label fx:id="lblFormation1" layoutX="324.0" layoutY="558.0" prefHeight="15.0" prefWidth="131.0" text="This is the Formation tab" />
+      <Button fx:id="btnFormation1" layoutX="335.0" layoutY="597.0" mnemonicParsing="false" onAction="#btnFormation1Clicked" text="Formation Button" />
+      <Accordion layoutX="308.0" layoutY="153.0" />
+   </children>
+</AnchorPane>

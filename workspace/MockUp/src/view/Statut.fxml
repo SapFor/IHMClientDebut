@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="346.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StatusController">
+   <children>
+      <Label fx:id="lblStatus1" layoutX="126.0" layoutY="173.0" prefHeight="24.0" prefWidth="118.0" text="This is the Status tab" />
+      <Button fx:id="btnStatus1" layoutX="136.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnDirector1Clicked" text="Status Button" />
+   </children>
+</AnchorPane>

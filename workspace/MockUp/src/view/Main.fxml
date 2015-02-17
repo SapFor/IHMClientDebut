@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="728.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane layoutX="-75.0" prefHeight="586.0" prefWidth="797.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane prefHeight="495.0" prefWidth="933.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                  <Tab text="Candidatures">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                  <Tab text="Statut">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </Tab>
+                <Tab closable="false" text="Formations">
+                     <content>
+                        <fx:include source="Formation.fxml" />
+                     </content>
+                </Tab>
+                <Tab closable="false" text="Director">
+                     <content>
+                        <fx:include source="Director.fxml" />
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+         <top>
+            <Pane prefHeight="64.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Hyperlink layoutX="762.0" layoutY="21.0" text="John Doe" />
+                  <Hyperlink layoutX="901.0" layoutY="21.0" text="Deconnection" />
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
