@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="728.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <BorderPane layoutX="-75.0" prefHeight="586.0" prefWidth="797.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
@@ -35,7 +35,7 @@
             </TabPane>
          </center>
          <top>
-            <Pane prefHeight="64.0" BorderPane.alignment="CENTER">
+            <Pane prefHeight="65.0" BorderPane.alignment="CENTER">
                <children>
                   <Hyperlink layoutX="762.0" layoutY="21.0" text="John Doe" />
                   <Hyperlink layoutX="901.0" layoutY="21.0" text="Deconnection" />
