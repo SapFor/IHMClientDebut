@@ -7,6 +7,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+      <TitledPane animated="false" collapsible="false" layoutX="134.0" layoutY="-88.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <VBox layoutX="9.600000381469727" layoutY="9.600000381469727" />
+               </children>
+            </AnchorPane>
+        </content>
+      </TitledPane>
       <VBox layoutX="88.0" layoutY="165.0" />
       <ListView layoutX="221.0" layoutY="71.0" prefHeight="329.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="71.0" />
       <Label layoutX="235.0" layoutY="6.0" text="LISTES DES STAGES" />
