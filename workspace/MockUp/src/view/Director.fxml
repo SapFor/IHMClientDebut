@@ -5,10 +5,20 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
-<AnchorPane prefHeight="346.0" prefWidth="369.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.DirectorController">
+<AnchorPane prefHeight="346.0" prefWidth="369.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DirectorController">
    <children>
-      <Label fx:id="lblDirector1" layoutX="126.0" layoutY="173.0" prefHeight="24.0" prefWidth="118.0" text="This is the director tab" />
-      <Button fx:id="btnDirector1" layoutX="136.0" layoutY="209.0" mnemonicParsing="false" onAction="#btnDirector1Clicked" text="Director Button" />
+      <SplitPane dividerPositions="0.4904632152588556" layoutX="114.0" layoutY="48.0" prefHeight="346.0" prefWidth="369.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="204.0">
+               <children>
+                  <fx:include source="Director-left.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="206.0">
+               <children>
+                  <fx:include source="Director-right.fxml"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
    </children>
 </AnchorPane>
