@@ -11,12 +11,12 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="204.0">
                <children>
-                  <fx:include source="Director-left.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <fx:include fx:id="directorLeft" source="DirectorLeft.fxml" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="344.0" prefWidth="206.0">
                <children>
-                  <fx:include source="Director-right.fxml"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <fx:include fx:id="directorRight" source="DirectorRight.fxml"  AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children></AnchorPane>
         </items>
       </SplitPane>

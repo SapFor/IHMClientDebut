@@ -39,7 +39,7 @@
             </Tab>
             <Tab closable="false" text="Director">
                <content>
-                  <fx:include source="Director.fxml" />
+                  <fx:include fx:id="director" source="Director.fxml" />
                </content>
             </Tab>
         </tabs>

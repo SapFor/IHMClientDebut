@@ -1,27 +1,27 @@
 package controller;
 
-import java.net.URL;
-import java.util.ResourceBundle;
-
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import controller.DirectorRightController;
+import controller.DirectorLeftController;
 
-public class DirectorController implements Initializable{
 
-	@FXML private Button btnDirector1;
+public class DirectorController {
+
+//	@FXML private Button btnDirector1;
+//	@FXML private Label lblDirector1;
 	
-	@FXML private Label lblDirector1;
+	@FXML DirectorLeftController directorLeftController;
+	@FXML DirectorRightController directorRightController;
 	
-	@Override
-	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+	@FXML public void initialize() {
+		directorLeftController.init(this);
 	}
 	
-	@FXML private void btnDirector1Clicked(ActionEvent event){
-		System.out.println("Button Director Clicked");
+	public void loadTokenFromLeft(String token) {
+		directorRightController.getSessionToken(token);
 	}
+	
+
+
 
 }
