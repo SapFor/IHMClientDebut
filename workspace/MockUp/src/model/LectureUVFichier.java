@@ -8,7 +8,7 @@ import java.io.BufferedReader;
 import java.util.StringTokenizer;
 import java.util.ArrayList;
 /**
- * class pour lire et �crire des fichiers
+ * class pour lire et �crire des fichiers
  *
  * @author Caroline Chabert
  */
@@ -42,7 +42,7 @@ public class LectureUVFichier {
     }
 
     public String litMot(String asLigne, int anPosition) {
-        // anPosition est censÃ© dÃ©marrer Ã  1
+        // anPosition est censé démarrer à  1
         String mot = null;
         StringTokenizer lst = new StringTokenizer(asLigne);
         for (int i=1;i<=anPosition;i++) {
