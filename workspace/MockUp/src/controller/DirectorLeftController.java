@@ -49,7 +49,6 @@ public class DirectorLeftController implements Initializable{
 	     // JC: initialisation de la Liste au chargement de la page
 	    
 	    public void initialize(URL fxmlFileLocation, ResourceBundle resources) {
-	    System.out.println("passe par la");
 	    assert listUV != null : "fx:id=\"listUV\" was not injected: check your FXML file 'Director-left.fxml'.";
 	    LectureUVFichier fichierUV = new LectureUVFichier("ressources/UVname", 0);
     	ObservableList<String> items =FXCollections.observableArrayList (fichierUV.getListUV());

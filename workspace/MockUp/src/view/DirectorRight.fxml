@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.*?>
@@ -12,22 +14,32 @@
           <Region />
         </root>
       </SubScene>
-      <TitledPane animated="false" collapsible="false" layoutX="87.0" layoutY="26.0" prefHeight="400.0" prefWidth="600.0" text="Candidats de la session" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="87.0" layoutY="26.0" prefHeight="400.0" prefWidth="600.0" text="CANDIDATS DE LA SESSION" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="143.0">
                <children>
-                  <RadioButton fx:id="rdoAccepte" layoutX="37.0" layoutY="179.0" mnemonicParsing="false" text="Accepté">
+                  <RadioButton fx:id="rdoAccepte" layoutX="358.0" layoutY="76.0" mnemonicParsing="false" text="Accepté" AnchorPane.leftAnchor="350.0">
                      <toggleGroup>
                         <ToggleGroup fx:id="group" />
                      </toggleGroup>
                   </RadioButton>
-                  <RadioButton fx:id="rdoRefuse" layoutX="305.0" layoutY="188.0" mnemonicParsing="false" text="Refusé" toggleGroup="$group" />
-                  <RadioButton layoutX="153.0" layoutY="188.0" mnemonicParsing="false" text="Liste d'attente" toggleGroup="$group" />
-                  <Label fx:id="nom" layoutX="81.0" layoutY="41.0" text="Label" />
-                  <Label fx:id="prenom" layoutX="235.0" layoutY="41.0" text="Label" />
+                  <RadioButton fx:id="rdoRefuse" layoutX="533.0" layoutY="76.0" mnemonicParsing="false" text="Refusé" toggleGroup="$group" AnchorPane.leftAnchor="533.0" />
+                  <RadioButton layoutX="427.0" layoutY="76.0" mnemonicParsing="false" text="Liste d'attente" toggleGroup="$group" AnchorPane.leftAnchor="427.0" />
+                  <Label fx:id="nom" layoutX="25.0" layoutY="50.0" text="NOM">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="prenom" layoutX="153.0" layoutY="50.0" text="PRENOM">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <ListView fx:id="listNom" layoutX="14.0" layoutY="101.0" prefHeight="246.0" prefWidth="213.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="60.0" />
                </children>
             </AnchorPane>
         </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
       </TitledPane>
    </children>
 </AnchorPane>
