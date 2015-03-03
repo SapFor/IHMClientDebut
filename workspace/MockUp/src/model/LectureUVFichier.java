@@ -71,8 +71,8 @@ public class LectureUVFichier {
         return lsLigne;
     }
     
-    public ArrayList getListUV(){
-    	ArrayList listUV = new ArrayList();
+    public ArrayList<String> getListUV(){
+    	ArrayList<String> listUV = new ArrayList<String>();
     	String ligne = lireLigneSuivante();
     	while(ligne!=null){
     		listUV.add(litMot(ligne,1));

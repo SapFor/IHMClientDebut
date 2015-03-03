@@ -15,6 +15,7 @@ public class DirectorRightController {
 
 	//private DirectorController director;
 	private String sessionToken;
+	private DirectorController director;
 	
 	@FXML
     private Label nom;
@@ -68,7 +69,12 @@ public class DirectorRightController {
     	} */
     }
 
+		  public void init(DirectorController directorController) {
+			director = directorController;
+			}
+		
+	}
+
 
 
 		
-}

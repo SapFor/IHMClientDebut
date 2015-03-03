@@ -1,5 +1,6 @@
 package controller;
 import java.net.URL;
+
 import java.util.ResourceBundle;
 import model.LectureUVFichier;
 import javafx.collections.FXCollections;
@@ -22,32 +23,13 @@ public class MainController implements Initializable{
     private Tab formations;
 	@FXML
     private Tab Director;
-    @FXML
-    private ListView<String> listUV;
-    @FXML
-    private TextArea descrArea;
-    @FXML
-    private TextArea infoArea;
-    @FXML
-    private ListView<String> sessionArea;
-
-	
-	
-	
-    @FXML
-    private void OnClickDirector(Event event) {
-    	LectureUVFichier fichierUV = new LectureUVFichier("ressources/UVname", 0);
-    	ObservableList<String> items =FXCollections.observableArrayList (fichierUV.getListUV());
-    	listUV.setItems(items);
-    }
-	
- 	
-	
+  
+		
+    	 		
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
-			
-		
+					
 	}
 
 }
