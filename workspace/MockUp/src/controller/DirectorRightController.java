@@ -51,15 +51,14 @@ public class DirectorRightController {
 	}
 
 	public void loadCandidats(ObservableList<String> token) {
-		System.out.println("In DirectorRight: " + token);
-    	listNom.setItems(token);
-    	ObservableList<Pane> myRadioBtnList = FXCollections.observableArrayList (paneRadio);
-    	
-    	for(int i=0; i<token.size(); i++) {
+		listNom.setItems(token);
+		
+    	/*ObservableList<Pane> myRadioBtnList = FXCollections.observableArrayList (paneRadio);
+    	   	for(int i=0; i<token.size(); i++) {
     		myRadioBtnList.add(paneRadio);
         	paneRadio.setVisible(true);
     	}
-    	listRadio.setItems(myRadioBtnList);
+    	listRadio.setItems(myRadioBtnList);*/
 
     }
 

@@ -14,8 +14,6 @@ import controller.DirectorLeftController;
 
 public class DirectorController {
 
-//	@FXML private Button btnDirector1;
-//	@FXML private Label lblDirector1;
 	@FXML DirectorLeftController directorLeftController;
 	@FXML DirectorRightController directorRightController;
 	
