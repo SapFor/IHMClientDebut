@@ -18,17 +18,13 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="143.0">
                <children>
-                  <Pane fx:id="paneRadio" layoutX="299.0" layoutY="75.0" visible="false">
-                     <children>
-                        <RadioButton fx:id="rdoAccepte" mnemonicParsing="false" text="Accepté" AnchorPane.leftAnchor="350.0">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="group" />
-                           </toggleGroup>
-                        </RadioButton>
-                        <RadioButton fx:id="rdoRefuse" layoutX="182.99996948242188" mnemonicParsing="false" text="Refusé" toggleGroup="$group" AnchorPane.leftAnchor="533.0" />
-                        <RadioButton layoutX="77.0" mnemonicParsing="false" text="Liste d'attente" toggleGroup="$group" AnchorPane.leftAnchor="427.0" />
-                     </children>
-                  </Pane>
+                  <RadioButton fx:id="rdoAccepte" layoutX="358.0" layoutY="76.0" mnemonicParsing="false" text="Accepté" AnchorPane.leftAnchor="350.0">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoRefuse" layoutX="533.0" layoutY="76.0" mnemonicParsing="false" text="Refusé" toggleGroup="$group" AnchorPane.leftAnchor="533.0" />
+                  <RadioButton layoutX="427.0" layoutY="76.0" mnemonicParsing="false" text="Liste d'attente" toggleGroup="$group" AnchorPane.leftAnchor="427.0" />
                   <Label fx:id="nom" layoutX="25.0" layoutY="50.0" text="NOM">
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
@@ -37,9 +33,7 @@
                      <font>
                         <Font name="System Bold Italic" size="12.0" />
                      </font></Label>
-                  <ListView fx:id="listNom" layoutX="33.6" layoutY="76.6" prefHeight="276.0" prefWidth="109.0" AnchorPane.bottomAnchor="31.0" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="465.0" AnchorPane.topAnchor="67.0" />
-                  <ListView fx:id="listPrenom" layoutX="158.6" layoutY="85.6" prefHeight="236.0" prefWidth="73.0" AnchorPane.bottomAnchor="62.0" AnchorPane.leftAnchor="149.0" AnchorPane.rightAnchor="376.0" AnchorPane.topAnchor="76.0" />
-                  <ListView fx:id="listRadio" layoutX="204.0" layoutY="83.0" prefHeight="264.0" prefWidth="242.0" AnchorPane.bottomAnchor="46.200000000000045" AnchorPane.leftAnchor="204.0" AnchorPane.rightAnchor="171.20000000000005" AnchorPane.topAnchor="83.0" />
+                  <ListView fx:id="listNom" layoutX="14.0" layoutY="101.0" prefHeight="246.0" prefWidth="213.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="60.0" />
                </children>
             </AnchorPane>
         </content>

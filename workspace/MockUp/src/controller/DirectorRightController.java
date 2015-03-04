@@ -1,12 +1,8 @@
 package controller;
 
 import model.LectureUVFichier;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.layout.Pane;
 
 
 /**
@@ -26,20 +22,6 @@ public class DirectorRightController {
 	
 	@FXML
     private Label prenom;
-	
-	@FXML
-    private ListView<String> listNom;
-	
-	@FXML
-    private ListView<String> listPrenom;
-	
-	@FXML
-    private Pane paneRadio;
-	
-	@FXML
-    private ListView<Pane> listRadio;
-	
-	
 		
 				
 /*	public void init(DirectorController directorController) {
@@ -48,23 +30,45 @@ public class DirectorRightController {
 	
 	public void getSessionToken(String token){
 		sessionToken = token;
+		showCandidats(sessionToken);
 	}
 
-	public void loadCandidats(ObservableList<String> token) {
-		System.out.println("In DirectorRight: " + token);
-    	listNom.setItems(token);
-    	ObservableList<Pane> myRadioBtnList = FXCollections.observableArrayList (paneRadio);
+    private void showCandidats(String sessionToken) {
+    	nom.setText(sessionToken);
     	
-    	for(int i=0; i<token.size(); i++) {
-    		myRadioBtnList.add(paneRadio);
-        	paneRadio.setVisible(true);
+  /*  	
+    	LectureUVFichier fichierStageInfo = new LectureUVFichier("ressources/" + sessionToken, 0);
+    	String ligneLu = "";
+    	
+    	// lecture du fichier jusqu'a la ligne candidats
+    	while( ligneLu != "candidats"){
+    		ligneLu = fichierStageInfo.lireLigneSuivante();
     	}
-    	listRadio.setItems(myRadioBtnList);
-
+    	
+    	// lecture du premier candidat
+    	ligneLu = fichierStageInfo.lireLigneSuivante();
+    	
+    	// lecture de l'info de chaque candidat
+    	while( ligneLu != "fcandidats"){
+    		LectureUVFichier fichierCandidatInfo = new LectureUVFichier("ressources/ligneLu", 0);
+    		String ligne2Lu = "";
+    		
+    		// lecture du fichier jusqu'a la ligne nom
+    		while( ligne2Lu != "nom"){
+	    		ligne2Lu = fichierCandidatInfo.lireLigneSuivante();
+	    	}
+    		
+    		// lecture du nom
+    		nom.setText(fichierCandidatInfo.lireLigneSuivante());
+    		while( ligne2Lu != "prenom"){
+	    		ligne2Lu = fichierCandidatInfo.lireLigneSuivante();
+	    	}
+    		
+    		// lecture du prenom
+    		prenom.setText(fichierCandidatInfo.lireLigneSuivante());
+    	} */
     }
 
-    
-    
 		  public void init(DirectorController directorController) {
 			director = directorController;
 			}

@@ -3,8 +3,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 import model.LectureUVFichier;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -15,7 +13,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Labeled;
 import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
 //import javafx.scene.control.TextArea;
 import controller.DirectorController;
 
@@ -39,8 +36,8 @@ public class DirectorLeftController implements Initializable{
 	    
 	    // allows DirectorLeftController to pass information to DirectorRightController using DirectorController
 	    
-	  /*public void OnClickSession (ActionEvent event) {
-	    	director.loadTokenFromLeft();
+	  /* public void OnClickSession (ActionEvent event) {
+	    	director.loadTokenFromLeft(((listUV).getText());
 	    }*/
 	    
 	    
@@ -57,34 +54,22 @@ public class DirectorLeftController implements Initializable{
     	ObservableList<String> items =FXCollections.observableArrayList (fichierUV.getListUV());
     	listUV.setItems(items);
     	//System.out.println("passe par la");
-    	
-    	listUV.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
-    	    @Override
-    	    public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-    			LectureUVFichier fichier = new LectureUVFichier("ressources/" + newValue, 0);
-    		    ObservableList<String> ObserListNom =FXCollections.observableArrayList (fichier.getListUV());
-    		    director.loadTokenFromLeft(ObserListNom);
-    	        System.out.println("Selected item: " + newValue);
-    	    }
-
-    	});
-	  //  addListener(new ChangeListener<ListView<String>>() {
 	    }
+}
 	    
-	/*    @FXML
+	    
+/*	    @FXML
 	   void OnClicSession(Event event) {
-	    	/*String items =sessionArea.getSelectionModel().getSelectedItem();
+	    	String items =sessionArea.getSelectionModel().getSelectedItem();
 	    	
 	    	StringTokenizer lst = new StringTokenizer(items);
 	    	String mot = lst.nextToken();
 	    	LectureUVFichier fichierInfo = new LectureUVFichier("ressources/Info"+ mot, 0);
 	    	String info = fichierInfo.getDescription();
-	    	infoArea.setText(info);}*/
+	    	infoArea.setText(info);}
 	      
-	   
-    	
 	  		
-}
+}*/
 	
 	
 	
