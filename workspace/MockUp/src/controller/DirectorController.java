@@ -24,8 +24,8 @@ public class DirectorController {
 		directorRightController.init(this);
 		}
 	
-	public void loadTokenFromLeft(String token) {
-		directorRightController.getSessionToken(token);
+	public void loadTokenFromLeft(ObservableList<String> token) {
+		directorRightController.loadCandidats(token);
 	}
 	
 
