@@ -15,7 +15,6 @@ public class DirectorController implements Initializable{
 	
 	@FXML private Label lblDirector1;
 	
-	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
 	}

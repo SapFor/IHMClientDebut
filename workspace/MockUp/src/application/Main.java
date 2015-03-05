@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import ressources.UVConcret;
+import model.UVConcret;
 
 public class Main extends Application {
 	@Override
@@ -25,5 +25,7 @@ public class Main extends Application {
 		launch(args);
 		
 		UVConcret INC1 = new UVConcret();
+		System.out.println(INC1);
+		
 	}
 }
