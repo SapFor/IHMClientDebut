@@ -106,24 +106,24 @@ public class DirectorRightController {
 			
 			// try to increase counter everytime the radio button is selected
 						
-			
+						
 			radioGroup.selectedToggleProperty().addListener(new ChangeListener<Toggle>()
-							        { @Override
-							 			
-							            public void changed(ObservableValue<? extends Toggle> ov, Toggle toggle, Toggle new_toggle)
+							        {
+							 			 public void changed(ObservableValue<? extends Toggle> ov, Toggle toggle, Toggle new_toggle)
 							            {
-							            					        	
-							             int count=0;
-							                if (new_toggle == null)
-							                {
-							                }
+							 			int count = 0;			        	
+							               if (radioGroup.getSelectedToggle() == rdoAccepte)
+							                     {
+							                       	count ++; counter.setText(""+count);
+							                       	}
+							            	   							                
 							                else
 							                { 
-							                	count ++;	counter.setText(""+count);	                  		                    
+							                		                  		                    
 							                }
 							            } 
 							        });
-		}
+		};
 		
 	}
 }
