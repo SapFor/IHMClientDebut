@@ -44,10 +44,10 @@ public class DirectorLeftController implements Initializable{
     	listUV.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<String>() {
     	    @Override
     	    public void changed(ObservableValue<? extends String> observable, String oldValue, String newValue) {
-    			LectureUVFichier fichier = new LectureUVFichier("ressources/" + newValue, 0);
-    		    ObservableList<String> ObserListNom =FXCollections.observableArrayList (fichier.getListUV());
-    		    director.loadTokenFromLeft(ObserListNom);
-    	        System.out.println("Selected item: " + newValue);
+        		//LectureUVFichier fichier = new LectureUVFichier("ressources/" + newValue, 0);
+        	    //ObservableList<String> ObserListNom =FXCollections.observableArrayList (fichier.getListUV());
+        	    //director.loadTokenFromLeft(ObserListNom);
+        	    director.loadTokenFromLeft(newValue);
     	    }
 
     	});

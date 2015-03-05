@@ -17,6 +17,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Toggle;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
@@ -39,10 +40,19 @@ public class DirectorRightController {
 	@FXML
     private GridPane gridCandidats;
 	
-	public void loadCandidats(ObservableList<String> token) {
-		loadGrid(token);
-    }
+	@FXML
+    private BorderPane bdrPaneCandidats;
 
+	/*public void loadCandidats(ObservableList<String> token) {
+		loadGrid(token);
+    }*/
+	
+	public void loadCandidats(String sessionID) {
+		LectureUVFichier fichier = new LectureUVFichier("ressources/" + sessionID, 0);
+		ObservableList<String> ObserListNom =FXCollections.observableArrayList (fichier.getListUV());
+		loadGrid(ObserListNom);
+		loadButtons();
+	}
 
 	public void init(DirectorController directorController) {
 		director = directorController;
@@ -124,6 +134,24 @@ public class DirectorRightController {
 							            } 
 							        });
 		};
+		
+	}
+	
+	
+	private void loadButtons(){
+		Button btnCloturer = new Button();
+		Button btnEnvoyer = new Button();
+		btnCloturer.setText("Clôturer la session");
+		btnEnvoyer.setText("Valider les candidatures");
+		btnCloturer.setVisible(true); //need to call function that determins how to show button
+		btnCloturer.setVisible(true); //need to call function that determins how to show button
+
+		HBox hbButtons = new HBox(btnCloturer, btnEnvoyer);
+		hbButtons.setSpacing(100);
+		hbButtons.setPadding(new Insets(10, 10, 10, 10));
+		bdrPaneCandidats.setBottom(hbButtons);
+		
+		
 		
 	}
 }
