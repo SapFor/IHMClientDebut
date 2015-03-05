@@ -27,6 +27,7 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                   </GridPane>
+                  <HBox layoutX="41.0" layoutY="289.0" />
                </children>
             </AnchorPane>
         </content>
