@@ -34,7 +34,7 @@
           </Tab>
             <Tab closable="false" text="Formations">
               <content>
-                <fx:include source="Formation1.fxml" />
+                <fx:include source="Formation.fxml" />
               </content>
             </Tab>
             <Tab closable="false" text="Director">
