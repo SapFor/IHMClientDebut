@@ -8,8 +8,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.SplitMenuButton;
 import javafx.scene.layout.HBox;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 
@@ -17,9 +17,7 @@ import javafx.scene.control.Button;
 
 public class FormationController implements Initializable{
 
-	@FXML private Button btnFormation1;
-	
-	@FXML private Label lblFormation1;
+	@FXML private SplitMenuButton btnFormation;
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
