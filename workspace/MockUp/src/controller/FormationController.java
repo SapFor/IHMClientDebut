@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.scene.control.SplitMenuButton;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -24,20 +25,17 @@ import javafx.scene.control.Button;
 public class FormationController implements Initializable{
 
 	@FXML
-	private TableView<String> UVTable;
-	
-	@FXML
-    private TableColumn<String, String> UVColumn;
-	
+	private ListView<String> UVList;
+	  	
 	@FXML
 	private SplitMenuButton btnFormation;
 	
     //private ObservableList<String> ListeUV = FXCollections.observableArrayList();
 	
-	private void chargementUV (ObservableList<String> ListeUV){
-		
-	}
-	
+//	private void chargementUV (ObservableList<String> ListeUV){
+//		
+//	}
+
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 		
@@ -49,7 +47,9 @@ public class FormationController implements Initializable{
 		
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
 		
-        UVColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
+		UVList.setItems(ListeUV);
+						
+        //UVColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 
 	}
 
