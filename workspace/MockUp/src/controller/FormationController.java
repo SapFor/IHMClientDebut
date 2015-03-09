@@ -75,6 +75,8 @@ public class FormationController implements Initializable{
     	//L'affichage de la descritpion de l'UV
     	String description= new String("la description de l'UV");
     	UVDesc.setText(description);
+    	
+    	//pour ne pas modifier le text area dans le programme
     	UVDesc.setEditable(false);
     	
     	//l'affichage des sessions 
@@ -96,6 +98,8 @@ public class FormationController implements Initializable{
     	String infos= new String("les infos détaillées de la session"+
     							"\n"+"La session se déroule à:...");
     	InfoSession.setText(infos);
+    	
+    	//pour ne pas modifier le text area dans le programme
     	InfoSession.setEditable(false);
     	
     	
