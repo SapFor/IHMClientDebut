@@ -31,7 +31,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <ListView fx:id="UVList" layoutX="39.0" layoutY="104.0" prefHeight="662.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <ListView fx:id="UVList" layoutX="39.0" layoutY="104.0" onMouseClicked="#clicUV" prefHeight="662.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                        </children>
                                     </AnchorPane>
                                 </content>
@@ -51,7 +51,7 @@
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <ListView layoutX="100.0" layoutY="57.0" prefHeight="314.0" prefWidth="342.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <ListView fx:id="SessionList" layoutX="100.0" layoutY="57.0" onMouseClicked="#clicSession" prefHeight="314.0" prefWidth="342.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                    </children>
                                                 </AnchorPane>
                                             </content>
@@ -67,12 +67,13 @@
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <Button layoutX="131.0" layoutY="240.0" mnemonicParsing="false" prefWidth="110.0" text="Retirer" AnchorPane.bottomAnchor="45.0" />
+                                                      <TextArea fx:id="InfoSession" layoutX="22.0" layoutY="8.0" prefHeight="312.0" prefWidth="340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <Button fx:id="retirerBt" layoutX="131.0" layoutY="242.0" mnemonicParsing="false" onAction="#clicRetirer" prefWidth="110.0" text="Retirer" AnchorPane.bottomAnchor="44.0" />
                                                    </children>
                                                 </AnchorPane>
                                             </content>
                                           </TitledPane>
-                                          <Button layoutX="132.0" layoutY="298.0" mnemonicParsing="false" prefWidth="110.0" text="Candidater" AnchorPane.bottomAnchor="15.0" />
+                                          <Button fx:id="candidaterBt" layoutX="132.0" layoutY="298.0" mnemonicParsing="false" onAction="#clicCand" prefWidth="110.0" text="Candidater" AnchorPane.bottomAnchor="15.0" />
                                        </children>
                                     </AnchorPane>
                                 </items>
@@ -83,7 +84,10 @@
                            <children>
                               <TitledPane animated="false" collapsible="false" layoutX="72.0" layoutY="93.0" prefHeight="688.0" prefWidth="346.0" text="Description" textAlignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                 <content>
-                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TextArea fx:id="UVDesc" layoutX="14.0" layoutY="14.0" prefHeight="664.0" prefWidth="343.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                       </children></AnchorPane>
                                 </content>
                                  <font>
                                     <Font name="System Bold" size="12.0" />
