@@ -1,5 +1,8 @@
 package controller;
 
+import java.util.Calendar;
+import java.util.Date;
+import java.text.DateFormat;
 import java.util.Iterator;
 
 import model.LectureUVFichier;
@@ -7,6 +10,8 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
@@ -42,20 +47,32 @@ public class DirectorRightController {
 	
 	@FXML
     private BorderPane bdrPaneCandidats;
+	
+	@FXML
+    private Button btnCloturer;
+	
+	@FXML
+    private Button btnEnvoyer;
 
 	/*public void loadCandidats(ObservableList<String> token) {
 		loadGrid(token);
     }*/
 	
 	public void loadCandidats(String sessionID) {
-		LectureUVFichier fichier = new LectureUVFichier("ressources/" + sessionID, 0);
-		ObservableList<String> ObserListNom =FXCollections.observableArrayList (fichier.getListUV());
+		//ObservableList<String> ObserListNom =FXCollections.observableArrayList (getListCandidatDirecteur(sessionID)); // line to use once connected to database
+		LectureUVFichier fichier = new LectureUVFichier("ressources/" + sessionID, 0); // comment out line once connected to database
+		ObservableList<String> ObserListNom =FXCollections.observableArrayList (fichier.getListUV()); // comment out line once connected to database
 		loadGrid(ObserListNom);
-		loadButtons();
+		loadButtons(sessionID);
+		
+		
+
 	}
 
 	public void init(DirectorController directorController) {
 		director = directorController;
+		
+		
 	}
 		
 	private void loadGrid(ObservableList<String> names) {
@@ -138,22 +155,42 @@ public class DirectorRightController {
 	}
 	
 	
-	private void loadButtons(){
-		Button btnCloturer = new Button();
-		Button btnEnvoyer = new Button();
+	private void loadButtons(String sessionID){
+	//	Button btnCloturer = new Button();
+	//	Button btnEnvoyer = new Button();
 		btnCloturer.setText("Clôturer la session");
 		btnEnvoyer.setText("Valider les candidatures");
-		btnCloturer.setVisible(true); //need to call function that determins how to show button
-		btnCloturer.setVisible(true); //need to call function that determins how to show button
-
+		btnCloturer.setVisible(true);
+		btnEnvoyer.setVisible(true);
+		
+		btnCloturer.setDisable(false); // delete line once connected to database
+		btnEnvoyer.setDisable(true); // delete line once connected to database
+		// if stage is closed testDate returns true
+/*		if(testDate(sessionID)){		// uncomment once connected to database
+			btnCloturer.setDisable(true);
+			btnEnvoyer.setDisable(false);
+		}
+		else{
+			btnCloturer.setDisable(false);
+			btnEnvoyer.setDisable(true);
+		}
+*/		
 		HBox hbButtons = new HBox(btnCloturer, btnEnvoyer);
 		hbButtons.setSpacing(100);
 		hbButtons.setPadding(new Insets(10, 10, 10, 10));
 		bdrPaneCandidats.setBottom(hbButtons);
-		
-		
-		
-	}
+	}	
+	
+	@FXML
+	private void btnCloturerAction(ActionEvent event) {
+		Date date = new Date();
+	    Calendar cal = Calendar.getInstance();
+	    cal.setTime(date);
+	    int year = cal.get(Calendar.YEAR);
+	    int month = cal.get(Calendar.MONTH) + 1; // January is 0
+	    int day = cal.get(Calendar.DAY_OF_MONTH);
+		//cloturerCandidature(getIdSession(), day, month, year);
+	 }
 }
 
 
