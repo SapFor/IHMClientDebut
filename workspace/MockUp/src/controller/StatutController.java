@@ -17,6 +17,7 @@ public class StatutController implements Initializable{
 	@FXML private Label lblStatut1;
 	
 	
+	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
 
 	}

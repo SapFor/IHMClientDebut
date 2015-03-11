@@ -8,8 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 
-
-
 public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
@@ -24,10 +22,8 @@ public class Main extends Application {
 		}
 	}
 	
-	
 	public static void main(String[] args) {
 		launch(args);
 		
-
 	}
 }
