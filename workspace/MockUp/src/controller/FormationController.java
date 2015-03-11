@@ -2,7 +2,6 @@ package controller;
 
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.collections.FXCollections;
@@ -11,26 +10,27 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.geometry.Insets;
 import javafx.scene.control.ListView;
-import javafx.scene.control.SplitMenuButton;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.HBox;
-import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-
-
 
 public class FormationController implements Initializable{
 
+	//Liste des UV accessibles au candidat
 	@FXML
 	private ListView<String> UVList;
-	  	
+	
+	//Boutons radio pour trier selon apprenant/formateur et groupe pour n'en avoir qu'un seuld e sélectionné
 	@FXML
-	private SplitMenuButton btnFormation;
+	private RadioButton boutonApprenant;
+	@FXML
+	private RadioButton boutonFormateur;
+	@FXML
+	private ToggleGroup toggleGroupe = new ToggleGroup();
+	
 	@FXML
 	private TextArea UVDesc;
 	
@@ -39,35 +39,21 @@ public class FormationController implements Initializable{
 	
 	@FXML
 	private TextArea InfoSession;
-    //private ObservableList<String> ListeUV = FXCollections.observableArrayList();
-	
-//	private void chargementUV (ObservableList<String> ListeUV){
-//		
-//	}
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		
+
 		ArrayList<String> ListeUVList = new  ArrayList<String>();
 		ListeUVList.add("INC1");
 		ListeUVList.add("INC2");
-		ListeUVList.add("FORM1");
-		ListeUVList.add("FORM2");
+		ListeUVList.add("DEV1");
+		ListeUVList.add("OC1");
 		
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
 		
 		UVList.setItems(ListeUV);
-						
-        //UVColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
-
 	}
 
-	@FXML private void btnFormation1Clicked(ActionEvent event){
-		System.out.println("Button Formation Clicked");
-	}
-	
-	
-	
 	@FXML
     void clicUV(Event event) {
     	
@@ -101,7 +87,38 @@ public class FormationController implements Initializable{
     	
     	//pour ne pas modifier le text area dans le programme
     	InfoSession.setEditable(false);
-    	
-    	
     }
+
+	/**
+	 * Affichage des UV pour le bouton apprenant sélectionné
+	 * @param event
+	 */
+	@FXML
+	private void boutonApprenantClicked(ActionEvent event){
+		ArrayList<String> ListeUVList = new  ArrayList<String>();
+		ListeUVList.add("INC1");
+		ListeUVList.add("INC2");
+		ListeUVList.add("DEV1");
+		ListeUVList.add("OC1");
+		
+		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
+		
+		UVList.setItems(ListeUV);
+	}
+	
+	/**
+	 * Affichage des UV pour le bouton formateur sélectionné
+	 * @param event
+	 */
+	@FXML
+	private void boutonFormateurClicked(ActionEvent event){
+		ArrayList<String> ListeUVList = new  ArrayList<String>();
+		ListeUVList.add("FORM1");
+		ListeUVList.add("FORM2");
+
+		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
+		
+		UVList.setItems(ListeUV);
+	}
+	
 }

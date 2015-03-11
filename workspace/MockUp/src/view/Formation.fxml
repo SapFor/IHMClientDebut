@@ -12,13 +12,15 @@
          <children>
             <AnchorPane prefHeight="50.0">
                <children>
-                  <HBox layoutX="29.0" layoutY="6.0" spacing="20.0" AnchorPane.topAnchor="15.0" />
-                  <SplitMenuButton layoutX="550.0" layoutY="11.0" mnemonicParsing="false" text="Apprenant" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="5.0">
-                    <items>
-                      <MenuItem mnemonicParsing="false" text="Apprenant" />
-                      <MenuItem mnemonicParsing="false" text="Formateur" />
-                    </items>
-                  </SplitMenuButton>
+                  <HBox layoutX="40.0" layoutY="15.0" prefWidth="250.0" spacing="15.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="816.0" AnchorPane.topAnchor="15.0">
+                     <children>
+                        <RadioButton fx:id="boutonApprenant" layoutX="40.0" layoutY="15.0" mnemonicParsing="false" onAction="#boutonApprenantClicked" prefWidth="100.0" selected="true" text="Apprenant">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="ToggleGroup" />
+                           </toggleGroup></RadioButton>
+                        <RadioButton fx:id="boutonFormateur" layoutX="183.0" layoutY="15.0" mnemonicParsing="false" onAction="#boutonFormateurClicked" prefWidth="100.0" text="Formateur" toggleGroup="$ToggleGroup" />
+                     </children>
+                  </HBox>
                </children>
             </AnchorPane>
             <AnchorPane>
@@ -31,7 +33,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <ListView fx:id="UVList" layoutX="39.0" layoutY="104.0" onMouseClicked="#clicUV" prefHeight="662.0" prefWidth="292.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <ListView fx:id="UVList" layoutX="39.0" layoutY="104.0" onMouseClicked="#clicUV" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                        </children>
                                     </AnchorPane>
                                 </content>
@@ -51,7 +53,7 @@
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <ListView fx:id="SessionList" layoutX="100.0" layoutY="57.0" onMouseClicked="#clicSession" prefHeight="314.0" prefWidth="342.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <ListView fx:id="SessionList" layoutX="100.0" layoutY="57.0" onMouseClicked="#clicSession" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                    </children>
                                                 </AnchorPane>
                                             </content>
@@ -67,7 +69,7 @@
                                             <content>
                                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                                    <children>
-                                                      <TextArea fx:id="InfoSession" layoutX="22.0" layoutY="8.0" prefHeight="312.0" prefWidth="340.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      <TextArea fx:id="InfoSession" layoutX="22.0" layoutY="8.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                                       <Button layoutX="131.0" layoutY="242.0" mnemonicParsing="false" prefWidth="110.0" text="Retirer" AnchorPane.bottomAnchor="44.0" />
                                                    </children>
                                                 </AnchorPane>
@@ -86,7 +88,7 @@
                                 <content>
                                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <TextArea fx:id="UVDesc" layoutX="14.0" layoutY="14.0" prefHeight="664.0" prefWidth="343.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                          <TextArea fx:id="UVDesc" layoutX="14.0" layoutY="14.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                                        </children></AnchorPane>
                                 </content>
                                  <font>
