@@ -148,6 +148,10 @@ public class FormationController implements Initializable{
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
 		
 		UVList.setItems(ListeUV);
+		
+		UVDesc.clear();
+		SessionList.setItems(FXCollections.observableArrayList());
+		InfoSession.clear();
 	}
 	
 	/**
@@ -163,6 +167,9 @@ public class FormationController implements Initializable{
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
 		
 		UVList.setItems(ListeUV);
+		UVDesc.clear();
+		SessionList.setItems(FXCollections.observableArrayList());
+		InfoSession.clear();
 	}
 	
 
