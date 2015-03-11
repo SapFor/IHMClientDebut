@@ -108,10 +108,15 @@ public class FormationController implements Initializable{
 			SessionUVList.add("Laval");
 			SessionUVList.add("Reims");
 			ObservableList<String> SessionUV = FXCollections.observableArrayList(SessionUVList);
-
 			SessionList.setItems(SessionUV);
 		}
+		
+		// Clear le Texte area de info session quand on change d'UV.
 		InfoSession.clear();
+		
+		// Clear la selection de session quand on change d'UV.
+		SessionList.getSelectionModel().clearSelection();
+
 		candidaterBt.setVisible(false);
 		retirerBt.setVisible(false);
 	}
@@ -163,6 +168,9 @@ public class FormationController implements Initializable{
 		UVDesc.clear();
 		SessionList.setItems(FXCollections.observableArrayList());
 		InfoSession.clear();
+		// Clear la selection d'UV quand on change de mode apprenant ou formateur.
+		UVList.getSelectionModel().clearSelection();
+
 	}
 
 	/**
@@ -181,6 +189,7 @@ public class FormationController implements Initializable{
 		UVDesc.clear();
 		SessionList.setItems(FXCollections.observableArrayList());
 		InfoSession.clear();
+		UVList.getSelectionModel().clearSelection();
 	}
 
 
