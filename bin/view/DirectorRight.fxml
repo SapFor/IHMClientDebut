@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DirectorRightController">
+   <children>
+      <SubScene height="600.0" width="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <root>
+          <Region />
+        </root>
+      </SubScene>
+      <TitledPane alignment="CENTER" animated="false" collapsible="false" layoutX="87.0" layoutY="26.0" prefHeight="400.0" prefWidth="600.0" text="CANDIDATS DE LA SESSION" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="374.0" prefWidth="143.0">
+               <children>
+                  <RadioButton fx:id="rdoAccepte" layoutX="358.0" layoutY="76.0" mnemonicParsing="false" text="Accepté" AnchorPane.leftAnchor="350.0">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="rdoRefuse" layoutX="533.0" layoutY="76.0" mnemonicParsing="false" text="Refusé" toggleGroup="$group" AnchorPane.leftAnchor="533.0" />
+                  <RadioButton layoutX="427.0" layoutY="76.0" mnemonicParsing="false" text="Liste d'attente" toggleGroup="$group" AnchorPane.leftAnchor="427.0" />
+                  <Label fx:id="nom" layoutX="25.0" layoutY="50.0" text="NOM">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <Label fx:id="prenom" layoutX="153.0" layoutY="50.0" text="PRENOM">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font></Label>
+                  <ListView fx:id="listNom" layoutX="14.0" layoutY="101.0" prefHeight="246.0" prefWidth="213.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="300.0" AnchorPane.topAnchor="60.0" />
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TitledPane>
+   </children>
+</AnchorPane>

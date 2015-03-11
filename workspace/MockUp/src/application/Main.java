@@ -6,11 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-<<<<<<< HEAD
-import model.UVConcret;
-=======
 
->>>>>>> origin/Formations
+
+
 
 public class Main extends Application {
 	@Override
@@ -30,11 +28,6 @@ public class Main extends Application {
 	public static void main(String[] args) {
 		launch(args);
 		
-<<<<<<< HEAD
-		UVConcret INC1 = new UVConcret();
-		System.out.println(INC1);
-		
-=======
->>>>>>> origin/Formations
+
 	}
 }
