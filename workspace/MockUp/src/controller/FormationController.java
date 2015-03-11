@@ -86,7 +86,7 @@ public class FormationController implements Initializable{
     	InfoSession.setText(infos);
     	
     	//pour ne pas modifier le text area dans le programme
-    	InfoSession.setEditable(false);
+    	InfoSession.setEditable(true);
     }
 
 	/**
@@ -121,4 +121,21 @@ public class FormationController implements Initializable{
 		UVList.setItems(ListeUV);
 	}
 	
+	@FXML
+	private void handleRetirer() {
+	    String infos= new String("lBoutton Retier");
+    	InfoSession.setText(infos);
+    	
+    	//pour ne pas modifier le text area dans le programme
+    	InfoSession.setEditable(true);
+	}
+	
+	@FXML
+	private void handleCandidater() {
+	    String infos= new String("lBoutton Candidater");
+    	InfoSession.setText(infos);
+    	
+    	//pour ne pas modifier le text area dans le programme
+    	InfoSession.setEditable(true);
+	}
 }
