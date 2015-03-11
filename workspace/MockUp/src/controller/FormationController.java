@@ -22,7 +22,7 @@ public class FormationController implements Initializable{
 	@FXML
 	private ListView<String> UVList;
 
-	
+
 	//Boutons radio pour trier selon apprenant/formateur et groupe pour n'en avoir qu'un seuld e sélectionné
 	@FXML
 	private RadioButton boutonApprenant;
@@ -31,7 +31,7 @@ public class FormationController implements Initializable{
 	private RadioButton boutonFormateur;
 	@FXML
 	private ToggleGroup toggleGroupe = new ToggleGroup();
-	
+
 	@FXML
 	private TextArea UVDesc;
 
@@ -58,7 +58,7 @@ public class FormationController implements Initializable{
 		ListeUVList.add("INC2");
 		ListeUVList.add("DEV1");
 		ListeUVList.add("OC1");
-		
+
 
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
 
@@ -66,20 +66,22 @@ public class FormationController implements Initializable{
 	}
 
 
-		//UVColumn.setCellValueFactory(cellData -> cellData.getValue().firstNameProperty());
 
-	
 
 	@FXML private void btnFormation1Clicked(ActionEvent event){
 		System.out.println("Button Formation Clicked");
 	}
 
 
-
+	/**
+	 * Affiche la liste des sessions + la description quand un UV est selectionné
+	 * @param event
+	 */
 	@FXML
 	void clicUV(Event event) {
 
-		//String items =UVList.getSelectionModel().getSelectedItem();
+	
+		
 		//L'affichage de la descritpion de l'UV
 		String description= new String("la description de l'UV");
 		UVDesc.setText(description);
@@ -87,13 +89,10 @@ public class FormationController implements Initializable{
 		//pour ne pas modifier le text area dans le programme
 		UVDesc.setEditable(false);
 
+		// pour récupérer le nom de l'UV cliqué dans un String
+		String UVSelect = UVList.getSelectionModel().getSelectedItem();
 
-
-
-
-		String UVclic = UVList.getSelectionModel().getSelectedItem();
-
-		if (UVclic=="INC1"){
+		if (UVSelect=="INC1"){
 			//l'affichage des sessions 
 			ArrayList<String> SessionUVList = new  ArrayList<String>();
 			SessionUVList.add("Rennes");
@@ -111,27 +110,39 @@ public class FormationController implements Initializable{
 			ObservableList<String> SessionUV = FXCollections.observableArrayList(SessionUVList);
 
 			SessionList.setItems(SessionUV);
-
 		}
-
+		InfoSession.clear();
+		candidaterBt.setVisible(false);
+		retirerBt.setVisible(false);
 	}
 
-
+	/**
+	 * Affiche les infos détaillées d'une session selectionée
+	 * Bouton Candidater apparait
+	 * @param event
+	 */
 	@FXML
-	
-    void clicSession(Event event) {
-    	
-    	//String items =UVList.getSelectionModel().getSelectedItem();
-    	//L'affichage des infos détaillées de la session 
-    	String infos= new String("les infos détaillées de la session"+
-    							"\n"+"La session se déroule à:...");
-    	InfoSession.setText(infos);
-    	
-    	//pour ne pas modifier le text area dans le programme
-    	InfoSession.setEditable(false);
-		candidaterBt.setVisible(true);
+	void clicSession(Event event) {
 
-    }
+		//L'affichage des infos détaillées de la session 
+		String infos= new String("les infos détaillées de la session"+
+				"\n"+"La session se déroule à:...");
+		InfoSession.setText(infos);
+
+		//pour ne pas modifier le text area dans le programme
+		InfoSession.setEditable(false);
+
+		//afficher le bouton adequat une fois une session selectionnée
+		boolean bool=true;
+		if (bool){
+			candidaterBt.setVisible(true);
+		}
+		else {
+			retirerBt.setVisible(true);
+		}
+
+
+	}
 
 	/**
 	 * Affichage des UV pour le bouton apprenant sélectionné
@@ -144,16 +155,16 @@ public class FormationController implements Initializable{
 		ListeUVList.add("INC2");
 		ListeUVList.add("DEV1");
 		ListeUVList.add("OC1");
-		
+
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
-		
+
 		UVList.setItems(ListeUV);
-		
+
 		UVDesc.clear();
 		SessionList.setItems(FXCollections.observableArrayList());
 		InfoSession.clear();
 	}
-	
+
 	/**
 	 * Affichage des UV pour le bouton formateur sélectionné
 	 * @param event
@@ -165,27 +176,36 @@ public class FormationController implements Initializable{
 		ListeUVList.add("FORM2");
 
 		ObservableList<String> ListeUV = FXCollections.observableArrayList(ListeUVList);
-		
+
 		UVList.setItems(ListeUV);
 		UVDesc.clear();
 		SessionList.setItems(FXCollections.observableArrayList());
 		InfoSession.clear();
 	}
-	
+
 
 	@FXML
 	void clicCandidater(Event event) {
 		candidaterBt.setVisible(false);
 		retirerBt.setVisible(true);
+		String SessionSelect = SessionList.getSelectionModel().getSelectedItem();
+		String UVSelect = UVList.getSelectionModel().getSelectedItem();
+		String IdSession = UVSelect+SessionSelect;
+		System.out.println(IdSession);
 
 	}
-	
-	
+
+
 	@FXML
 	void clicRetirer(Event event) {
+		
 		candidaterBt.setVisible(true);
 		retirerBt.setVisible(false);
-
+		
+		String SessionSelect = SessionList.getSelectionModel().getSelectedItem();
+		String UVSelect = UVList.getSelectionModel().getSelectedItem();
+		String IdSession = UVSelect+SessionSelect;
+		System.out.println(IdSession);
 	}
 
 
